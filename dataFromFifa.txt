@@ -1,0 +1,53 @@
+    # TEAM, ATT, DEF
+    allResults = [
+        ["Brazil", 83, 84],
+        ["Croatia", 77, 77],
+        ["Mexico", 79, 73],
+        ["Cameroon", 75, 76],
+        ["Spain", 85, 82],
+        ["Netherlands", 84, 75],
+        ["Chile", 76, 74],
+        ["Australia", 72, 68],
+        ["Colombia", 77, 75],
+        ["Greece", 74, 75],
+        ["Cote D'Ivoire", 78, 73],
+        ["Japan", 71, 73],
+        ["Uruguay", 83, 78],
+        ["Costa Rica", 72, 67],
+        ["England", 82, 80],
+        ["Italy", 83, 80],
+        ["Switzerland", 74, 76],
+        ["Ecuador", 72, 67],
+        ["France", 81, 78],
+        ["Honduras", 65, 69],
+        ["Argentina", 85, 79],
+        ["Bosnia-Herzegovina", 82, 72],
+        ["Iran", 68, 51],
+        ["Nigeria", 74, 66],
+        ["Germany", 84, 82],
+        ["Portugal", 82, 80],
+        ["Ghana", 80, 69],
+        ["USA", 76, 72],
+        ["Belgium", 80, 79],
+        ["Algeria", 74, 71],
+        ["Russia", 77, 77],
+        ["Korea Republic", 74, 69]
+    ]
+
+    avgScored = 0
+    avgConceded = 0
+    for result in allResults:
+        avgScored += result[1]
+        avgConceded += result[2]
+
+
+    avgScored = avgScored / len(allResults)
+    avgConceded = avgConceded / len(allResults)
+
+    # print avgScored
+    # print avgConceded
+
+    for result in allResults:
+        result.append(pow(float(result[1])/avgScored, 2))
+        result.append(pow(float(result[2])/avgConceded, 2))
+        # print result
